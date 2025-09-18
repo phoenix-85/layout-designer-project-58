@@ -1,7 +1,60 @@
 /** CSS STYLE **/
+@font-face {
+  font-family: "Open Sans";
+  font-weight: normal;
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
 
-.hello {
-  display: block;
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+}
 
-  color: #fff;
+@font-face {
+  font-family: Neucha;
+  font-weight: normal;
+  src: url("../fonts/Neucha/Neucha-Regular.ttf");
+}
+
+:root {
+  --white: #777;
+  --white-50: #d7ccc0;
+  --light: #f5f4f0;
+  --primary: #fe8a02;
+  --primary-dark: #42413c;
+  --dark: #2a2626;
+  --dark-50: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6em;
+  color: var(--dark);
+}
+
+h1,h2,h3 {
+  font-family: Neucha, sans-serif;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+section {
+  max-width: 1110px;
+  justify-content: center;
+  padding: 100px 0;
 }
