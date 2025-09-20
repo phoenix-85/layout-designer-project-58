@@ -1,24 +1,24 @@
 /** CSS STYLE **/
 @font-face {
   font-family: "Open Sans";
-  font-weight: normal;
+  font-weight: 400;
   src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "Open Sans";
-  font-weight: bold;
+  font-weight: 700;
   src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
 }
 
 @font-face {
   font-family: Neucha;
-  font-weight: normal;
+  font-weight: 400;
   src: url("../fonts/Neucha/Neucha-Regular.ttf");
 }
 
 :root {
-  --white: #777;
+  --white: #fff;
   --white-50: #d7ccc0;
   --light: #f5f4f0;
   --primary: #fe8a02;
@@ -27,9 +27,16 @@
   --dark-50: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
+  --container-width: 1440px;
+  --content-width: 1110px;
+  --column-gap: 30px;
+  --content-hpad: 100px;
+  --content-vpad: calc((var(--container-width) - var(--content-width)) / 2);
+  --column-width: calc((var(--content-width) - var(--column-gap)) / 2);
 }
 
 body {
+  margin: 0;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6em;
@@ -37,8 +44,10 @@ body {
 }
 
 h1,h2,h3 {
+  position: relative;
   font-family: Neucha, sans-serif;
   line-height: 1.2em;
+  font-weight: 400;
 }
 
 h1 {
@@ -54,7 +63,90 @@ h3 {
 }
 
 section {
-  max-width: 1110px;
+  width: var(--container-width);
+}
+
+section::before {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--white-50);
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+
+  content: "";
+}
+
+.content {
+  padding: var(--content-hpad) var(--content-vpad);
+}
+
+.title {
+  position: relative;
+  height: 525px;
+}
+
+.title h1 {
+  margin: 0;
+}
+
+.title img {
+  position: absolute;
+  top: -65px;
+  left: 25%;
+  z-index: -1;
+}
+
+.columns {
+  margin-top: -60px;
+  gap: var(--column-gap);
+  line-height: 1.6;
+}
+
+.col {
+  width: var(--column-width);
+  margin-top: -17px;
+}
+
+.btn {
+  display: block;
+
+  width: max-content;
+  margin-top: 35px;
+  padding: 12px 24px;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+
+  background-color: var(--primary);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
   justify-content: center;
-  padding: 100px 0;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.orange {
+  color: var(--primary);
 }
