@@ -72,7 +72,7 @@ section {
 .back-img::before {
   position: absolute;
 
-  height: 960px;
+  height: 914px;
   width: var(--container-width);
 
   background-color: var(--white-50);
@@ -85,10 +85,7 @@ section {
 }
 
 .content {
-  padding-top: var(--content-hpad);
-  padding-right: var(--content-vpad);
-  padding-left: var(--content-vpad);
-  padding-bottom: var(--content-hpad);
+  padding: var(--content-hpad) var(--content-vpad);
 }
 
 .header-title {
@@ -145,13 +142,68 @@ section {
 .preview-video {
   position: absolute;
   left: 95px;
-  height: 517px;
+  height: 569px;
   width: 919px;
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
-.preview-bottom-pad {
-  padding-bottom: 0;
+.preview-image::before {
+  position: absolute;
+  top: 1728px;
+  height: 100px;
+  width: var(--container-width);
+  background-color: var(--primary-dark);
+  z-index: -1;
+
+  content: "";
+}
+
+.navigation {
+  padding-top: -100px;
+}
+
+.back-dark::before {
+  position: absolute;
+  height: 914px;
+  width: var(--container-width);
+  background-color: var(--primary-dark);
+  z-index: -1;
+
+  content: "";
+}
+
+.card-line {
+  gap: 30px;
+}
+
+.card-main h2 {
+  width: 350px;
+  font-size: 52px;
+}
+
+.card {
+  display: block;
+  padding: 24px;
+  width: 350px;
+
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--primary-dark);
+
+  background-color: var(--light);
+}
+
+.card-digit {
+  margin-bottom: 40px;
+  font: 64px/1 Neucha;
+}
+
+.card-title {
+  color: var(--primary);
+}
+
+.card-content p {
+  margin-bottom: 0;
 }
 
 .flex {
@@ -178,6 +230,14 @@ section {
   text-align: center;
 }
 
+.mt-25 {
+  margin-top: 25px;
+}
+
 .orange {
   color: var(--primary);
+}
+
+.white {
+  color: var(--white);
 }
