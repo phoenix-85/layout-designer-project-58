@@ -50,7 +50,7 @@ section {
   padding: var(--content-padding-y) var(--content-padding-x);
 }
 
-h1,h2,h3,h4 {
+h1,h2,h3 {
   position: relative;
   font-family: Neucha, sans-serif;
   line-height: 1.2em;
@@ -73,22 +73,42 @@ h3 {
 }
 
 h4 {
-  margin: 0;
-  font-size: 24px;
-}
-
-h5 {
-  margin: 0;
   font-size: 14px;
 }
 
-.columns {
+p, img {
+  margin: 0;
+}
+
+.section-title {
+  margin: 0;
+  font-family: Neucha, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2em;
+}
+
+.section-preview {
+  margin-top: 30px;
+  font-family: Neucha, sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.2em;
+}
+
+.section-how-work {
+  height: 26px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.section-columns {
   gap: var(--gap);
   line-height: 1.6;
 }
 
-.columns-title {
-  height: 27px;
+.section-columns-title {
+  height: 26px;
   padding-left: 1em;
 
   display: block;
@@ -96,6 +116,10 @@ h5 {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
+}
+
+.column {
+  flex-basis: var(--column-width);
 }
 
 .back-img::before {
@@ -128,28 +152,31 @@ h5 {
   z-index: -1;
 }
 
-.header-title {
-  position: relative;
-  height: 525px;
-}
-
-.header-title img {
-  position: absolute;
-  top: -65px;
-  left: 25%;
+.back-white {
+  background-color: var(--white);
   z-index: -1;
 }
 
-#header > .columns {
-  margin-top: -60px;
+#header {
+  height: 714px;
 }
 
-.col {
-  width: var(--column-width);
-  margin-top: -17px;
+#header img {
+  position: absolute;
+  top: 55px;
+  left: 461px;
+
+  display: block;
+  height: 525px;
+  z-index: -1;
 }
 
-.btn {
+#header > .section-columns {
+  position: absolute;
+  top: 555px;
+}
+
+#header .btn {
   display: block;
 
   width: max-content;
@@ -176,16 +203,20 @@ h5 {
   content: "";
 }
 
+#preview-image {
+  text-align: center;
+}
+
 #preview-image p {
   margin: 30px 0;
 }
 
-.preview {
+#preview-image a {
   position: relative;
   height: 485px;
 }
 
-.preview-video {
+#preview-image img {
   position: absolute;
   left: calc((var(--content-width) - 919px) / 2);
   height: 569px;
@@ -193,16 +224,12 @@ h5 {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
-.card-line {
-  gap: var(--gap);
-}
-
-.card-main h2 {
+#navigation h2 {
   width: var(--card-width);
   font-size: 52px;
 }
 
-.card {
+#navigation .card {
   display: block;
   padding: 24px;
   width: var(--card-width);
@@ -214,34 +241,18 @@ h5 {
   background-color: var(--light);
 }
 
-.card-digit {
+#navigation .card-digit {
   margin-bottom: 40px;
   font: 64px/1 Neucha, sans-serif;
 }
 
-.card-title {
+#navigation h3 {
   color: var(--primary);
+  margin-bottom: 1rem;
 }
 
-.card-content p {
-  margin-bottom: 0;
-}
-
-#ikea-effect {
-  max-height: 905px;
-}
-
-#ikea-effect > div {
-  margin: 0;
-  gap: var(--gap);
-}
-
-#ikea-effect h4 {
+#ikea-effect.section-title {
   color: var(--dark-50);
-}
-
-#ikea-effect h3 {
-  margin-top: 30px;
 }
 
 #ikea-effect img {
@@ -249,32 +260,19 @@ h5 {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
-#ikea-effect h5 {
-  margin-top: 100px;
-  margin-bottom: 20px;
-
-  background-color: var(--brown);
-}
-
-#ikea-effect p {
-  margin-bottom: 0;
-}
-
-#premature-optimization > div {
-  margin: 0;
-  gap: var(--gap);
+#premature-optimization.section-title {
+  color: var(--white-50);
 }
 
 #premature-optimization h4 {
-  color: var(--white-50);
+  color: var(--brown);
 }
 
 #premature-optimization h2 {
   color: var(--white);
 }
 
-#premature-optimization h3 {
-  margin-top: 30px;
+#premature-optimization.section-preview {
   color: var(--white);
 }
 
@@ -283,18 +281,22 @@ h5 {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
-#premature-optimization h5 {
-  margin-top: 100px;
-  margin-bottom: 20px;
-
-  color: var(--brown);
-
-  background-color: var(--white);
-}
-
 #premature-optimization p {
   margin-bottom: 0;
   color: var(--white);
+}
+
+#distortion-of-novelty.section-title {
+  color: var(--dark-50);
+}
+
+#distortion-of-novelty h4 {
+  color: var(--white);
+}
+
+#distortion-of-novelty img {
+  vertical-align: middle;
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
 .flex {
@@ -315,6 +317,10 @@ h5 {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap {
+  gap: var(--gap);
 }
 
 .text-center {
