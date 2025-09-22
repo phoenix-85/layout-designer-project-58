@@ -116,24 +116,16 @@ h5 {
 .back-light {
   background-color: var(--light);
   z-index: -1;
-
 }
 
-.back-dark::before {
-  position: absolute;
-  inset: 0;
-
-  height: auto;
-  width: var(--container-width);
-
+.back-dark {
   background-color: var(--primary-dark);
   z-index: -1;
-
-  content: "";
 }
 
-.header {
-  max-height: 914px;
+.back-brown {
+  background-color: var(--brown);
+  z-index: -1;
 }
 
 .header-title {
@@ -148,7 +140,7 @@ h5 {
   z-index: -1;
 }
 
-.header > .columns {
+#header > .columns {
   margin-top: -60px;
 }
 
@@ -172,11 +164,19 @@ h5 {
   background-color: var(--primary);
 }
 
-.preview-image {
-  max-height: 914px;
+#preview-image::before {
+  position: absolute;
+  left: 0;
+  top: 814px;
+  height: 100px;
+  width: var(--container-width);
+  background-color: var(--primary-dark);
+  z-index: -1;
+
+  content: "";
 }
 
-.preview-image p {
+#preview-image p {
   margin: 30px 0;
 }
 
@@ -191,22 +191,6 @@ h5 {
   height: 569px;
   width: 919px;
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
-}
-
-.preview-image::before {
-  position: absolute;
-  left: 0;
-  top: 814px;
-  height: 100px;
-  width: var(--container-width);
-  background-color: var(--primary-dark);
-  z-index: -1;
-
-  content: "";
-}
-
-.navigation {
-  max-height: 891px;
 }
 
 .card-line {
@@ -243,37 +227,74 @@ h5 {
   margin-bottom: 0;
 }
 
-.ikea-effect {
+#ikea-effect {
   max-height: 905px;
 }
 
-.ikea-effect > div {
+#ikea-effect > div {
   margin: 0;
   gap: var(--gap);
 }
 
-.ikea-effect h4 {
+#ikea-effect h4 {
   color: var(--dark-50);
 }
 
-.ikea-effect h3 {
+#ikea-effect h3 {
   margin-top: 30px;
 }
 
-.ikea-effect img {
+#ikea-effect img {
   vertical-align: middle;
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
-.ikea-effect h5 {
+#ikea-effect h5 {
   margin-top: 100px;
   margin-bottom: 20px;
 
   background-color: var(--brown);
 }
 
-.ikea-effect p {
+#ikea-effect p {
   margin-bottom: 0;
+}
+
+#premature-optimization > div {
+  margin: 0;
+  gap: var(--gap);
+}
+
+#premature-optimization h4 {
+  color: var(--white-50);
+}
+
+#premature-optimization h2 {
+  color: var(--white);
+}
+
+#premature-optimization h3 {
+  margin-top: 30px;
+  color: var(--white);
+}
+
+#premature-optimization img {
+  vertical-align: middle;
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+#premature-optimization h5 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+
+  color: var(--brown);
+
+  background-color: var(--white);
+}
+
+#premature-optimization p {
+  margin-bottom: 0;
+  color: var(--white);
 }
 
 .flex {
