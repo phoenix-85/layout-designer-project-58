@@ -27,7 +27,6 @@
   --dark-50: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
-
   --container-width: calc(var(--content-width) + var(--content-padding-x) * 2);
   --container-height: 914px;
   --content-width: 1110px;
@@ -164,10 +163,7 @@ h3 {
 
 .back-dark::before {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
 
   height: var(--container-height);
   width: var(--container-width);
@@ -201,7 +197,7 @@ h3 {
 
 .card-digit {
   margin-bottom: 40px;
-  font: 64px/1 Neucha;
+  font: 64px/1 Neucha, sans-serif;
 }
 
 .card-title {
