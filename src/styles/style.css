@@ -28,7 +28,6 @@
   --brown: #b09a81;
   --blue: #1085c5;
   --container-width: calc(var(--content-width) + var(--content-padding-x) * 2);
-  --container-height: 914px;
   --content-width: 1110px;
   --content-padding-y: 100px;
   --content-padding-x: 165px;
@@ -51,7 +50,7 @@ section {
   padding: var(--content-padding-y) var(--content-padding-x);
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
   position: relative;
   font-family: Neucha, sans-serif;
   line-height: 1.2em;
@@ -73,21 +72,68 @@ h3 {
   font-size: 34px;
 }
 
+h4 {
+  margin: 0;
+  font-size: 24px;
+}
 
+h5 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.columns {
+  gap: var(--gap);
+  line-height: 1.6;
+}
+
+.columns-title {
+  height: 27px;
+  padding-left: 1em;
+
+  display: block;
+
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+}
 
 .back-img::before {
   position: absolute;
+  inset: 0;
 
-  height: var(--container-height);
+  height: 914px;
   width: var(--container-width);
 
-  background-color: var(--white-50);
   background-image: url("../images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
 
   content: "";
+}
+
+.back-light {
+  background-color: var(--light);
+  z-index: -1;
+
+}
+
+.back-dark::before {
+  position: absolute;
+  inset: 0;
+
+  height: auto;
+  width: var(--container-width);
+
+  background-color: var(--primary-dark);
+  z-index: -1;
+
+  content: "";
+}
+
+.header {
+  max-height: 914px;
 }
 
 .header-title {
@@ -102,10 +148,8 @@ h3 {
   z-index: -1;
 }
 
-.columns {
+.header > .columns {
   margin-top: -60px;
-  gap: var(--gap);
-  line-height: 1.6;
 }
 
 .col {
@@ -126,6 +170,10 @@ h3 {
   color: var(--white);
 
   background-color: var(--primary);
+}
+
+.preview-image {
+  max-height: 914px;
 }
 
 .preview-image p {
@@ -158,20 +206,7 @@ h3 {
 }
 
 .navigation {
-  padding-top: -100px;
-}
-
-.back-dark::before {
-  position: absolute;
-  inset: 0;
-
-  height: var(--container-height);
-  width: var(--container-width);
-
-  background-color: var(--primary-dark);
-  z-index: -1;
-
-  content: "";
+  max-height: 891px;
 }
 
 .card-line {
@@ -205,6 +240,39 @@ h3 {
 }
 
 .card-content p {
+  margin-bottom: 0;
+}
+
+.ikea-effect {
+  max-height: 905px;
+}
+
+.ikea-effect > div {
+  margin: 0;
+  gap: var(--gap);
+}
+
+.ikea-effect h4 {
+  color: var(--dark-50);
+}
+
+.ikea-effect h3 {
+  margin-top: 30px;
+}
+
+.ikea-effect img {
+  vertical-align: middle;
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+.ikea-effect h5 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+
+  background-color: var(--brown);
+}
+
+.ikea-effect p {
   margin-bottom: 0;
 }
 
