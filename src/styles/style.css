@@ -299,6 +299,32 @@ p, img {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
+#hyperbolic-depreciation h4 {
+  color: var(--brown);
+}
+
+#hyperbolic-depreciation h2 {
+  color: var(--white);
+}
+
+#hyperbolic-depreciation.section-preview {
+  color: var(--white);
+}
+
+#hyperbolic-depreciation h4 {
+  height: 27px;
+}
+
+#hyperbolic-depreciation img {
+  vertical-align: middle;
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+#hyperbolic-depreciation p {
+  margin-bottom: 6px;
+  color: var(--white);
+}
+
 .flex {
   display: flex;
 }
