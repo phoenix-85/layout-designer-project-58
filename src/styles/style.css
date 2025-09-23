@@ -171,7 +171,7 @@ p, img {
   z-index: -1;
 }
 
-#header > .section-columns {
+#header .section-columns {
   position: absolute;
   top: 555px;
 }
@@ -337,6 +337,89 @@ p, img {
 
 #errors-in-planning .section-columns {
   padding-bottom: 14px;
+}
+
+#footer {
+  padding-bottom: 97px;
+}
+
+#footer .columns {
+  height: 190px;
+  padding-inline: 55px;
+}
+
+#footer .email {
+  margin-block: 10px;
+  font-size: 18px;
+}
+
+#footer .input {
+  box-sizing: border-box;
+  height: 50px;
+  padding: 15px;
+  border: none;
+}
+
+#footer input {
+  height: 100%;
+  width: calc(100% - 50px);
+  border: 0;
+}
+
+#footer input::placeholder {
+  color: #757575;
+  font: 13px/1.6 "Open Sans", sans-serif;
+  opacity: 0.4;
+}
+
+#footer button {
+  position: relative;
+  top: -15px;
+  right: -15px;
+  padding: 0;
+  height: 50px;
+  width: 70px;
+  background-color: var(--primary);
+  border-style: none;
+}
+
+#footer button::before {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/send.svg");
+  content: "";
+}
+
+#footer .rules {
+  font-size: 12px;
+}
+
+#footer .column a {
+  color: inherit;
+}
+
+#footer .text {
+  position: relative;
+  margin-top: 96px;
+  height: 98px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#footer .text p:first-child {
+  position: relative;
+  top: -20px;
+}
+
+#footer .text p:nth-child(2) {
+  position: relative;
+  top: 18px;
+}
+
+#footer .text .hexlet {
+  position: relative;
+  top: 59px;
 }
 
 .flex {
