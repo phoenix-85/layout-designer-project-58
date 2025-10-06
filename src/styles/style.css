@@ -104,7 +104,6 @@ p, img {
 
 .section-columns {
   gap: var(--gap);
-  line-height: 1.6;
 }
 
 .section-columns-title {
