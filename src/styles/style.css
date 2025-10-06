@@ -175,6 +175,10 @@ p, img {
   top: 560px;
 }
 
+#header br {
+  height: 10px;
+}
+
 #header .btn {
   display: block;
 
