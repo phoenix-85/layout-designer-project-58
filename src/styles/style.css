@@ -175,8 +175,8 @@ p, img {
   top: 560px;
 }
 
-#header br {
-  height: 10px;
+#header .section-columns p {
+  margin-bottom: 13px;
 }
 
 #header .btn {
